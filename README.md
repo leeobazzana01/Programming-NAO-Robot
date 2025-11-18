@@ -1,90 +1,90 @@
-# Programming the NAO Robot
+# Programando o Robô NAO
 
-This Repo contains all the codes to programming NAO Robot using the Software Choregraphe.
+Este Repositório contém todos os códigos para programar o Robô NAO usando o Software Choregraphe.
 
-## Quick Choregraphe Installation Guide
+## Guia Rápido de Instalação do Choregraphe
 
-### Step 1: Download Choregraphe
-1. Go to Softbank Robotics Developer Center
+1. Baixar Choregraphe
+Vá para o Softbank Robotics Developer Center
 
-2. Create an account or log in
+Crie uma conta ou faça login
 
-3. Navigate to "Downloads" section
+Navegue até a seção "Downloads"
 
-4. Download Choregraphe 2.8.x for your operating system (Windows/macOS)
+Baixe Choregraphe 2.8.x para seu sistema operacional (Windows/macOS)
 
-### Step 2: Install Choregraphe
-1. Windows:
+2. Instalar Choregraphe
 
-Run the downloaded .exe file
+Windows:
 
-Follow the installation wizard
+Execute o arquivo .exe baixado
 
-Accept license agreement
+Siga o assistente de instalação
 
-Choose installation directory
+Aceite o contrato de licença
 
-2. macOS:
+Escolha o diretório de instalação
 
-Open the downloaded .dmg file
+macOS:
 
-Drag Choregraphe to Applications folder
+Abra o arquivo .dmg baixado
 
-Launch from Applications
+Arraste Choregraphe para a pasta Aplicativos
 
-### Step 3: Initial Setup
-1. Launch Choregraphe
+Inicie a partir dos Aplicativos
 
-Connect to your NAO robot:
+3. Configuração Inicial
+Inicie Choregraphe
 
-Click "Connect" button
+Conecte ao seu robô NAO:
 
-Enter robot's IP address
+Clique no botão "Connect"
 
-Default port: 9559
+Digite o endereço IP do robô
 
-Test connection with "Say" box
+Porta padrão: 9559
 
-### Step 4: Configure Python SDK (Optional)
+Teste a conexão com a caixa "Say"
+
+4. Configurar SDK Python (Opcional)
 
 bash
-#### Install NAOqi Python SDK
-pip install path/to/naoqi-python-sdk.zip
+#### Instalar NAOqi Python SDK
 
-### Step 5: Verify Installation
-1. Create a new project
+pip install caminho/para/naoqi-python-sdk.zip
 
-2. Drag a "Say" box to the diagram
+5. Verificar Instalação
+Crie um novo projeto
 
-3. Enter text and press "Play"
+Arraste uma caixa "Say" para o diagrama
 
-4. Robot should speak the text
+Digite texto e pressione "Play"
 
-### Troubleshooting
-Connection issues: Check robot and computer are on same network
+O robô deve falar o texto
 
-Firewall: Allow Choregraphe through firewall
+## Solução de Problemas
+Problemas de conexão: Verifique se robô e computador estão na mesma rede
 
-Python path: Set correct Python interpreter in Preferences
+Firewall: Permita Choregraphe através do firewall
 
-Your NAO robot is now ready for programming!
+Caminho Python: Defina o interpretador Python correto em Preferências
 
-## MODULE ORGANIZATION
+Seu robô NAO agora está pronto para programação!
 
-**1. Core Modules**
+## ORGANIZAÇÃO DOS MÓDULOS
 
-Contains all the basic movements, postures, dances, etc...
+1. Módulos Principais
 
-**2. Vision Modules**
+Contém o funcionamento das classes básicas, explicação sobre como utilizar os métodos, todos os movimentos básicos, posturas, danças, etc...
 
-Contains the face detection, object tracking, color detection, and other codes.
+2. Módulos de Visão
 
-**3. Audio Modules**
+Contém a detecção facial, rastreamento de objetos, detecção de cores e outros códigos.
 
-Here we have the audio modules, testing speech recognition, syntheses, sound processing and audio effects.
+3. Módulos de Áudio
 
-**4. Complex Behaviors**
+Aqui temos os módulos de áudio, testando reconhecimento de fala, síntese, processamento de som e efeitos de áudio.
 
-We've the codes used to testing greeting, navigation, interactive demonstration, educational routines, and others.
+4. Comportamentos Complexos
 
-
+Temos os códigos usados para testar saudação, navegação, demonstração interativa, rotinas educacionais e outros.

@@ -88,3 +88,10 @@ Dado o fato de que **MyClass** herda de **GeneratedClass**, você pode utilizar 
 **8. Sistema de Arquivos** 
 **9. Logs**
 **10. Tratamento de Exceções**
+
+
+### 1. Inputs
+
+Os métodos que correspondem ao Input de na box devem ser definidos com a seguinte sintaxe: 
+
+**onInput_<input_name>**
