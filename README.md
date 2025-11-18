@@ -68,3 +68,23 @@ Firewall: Allow Choregraphe through firewall
 Python path: Set correct Python interpreter in Preferences
 
 Your NAO robot is now ready for programming!
+
+## MODULE ORGANIZATION
+
+**1. Core Modules**
+
+Contains all the basic movements, postures, dances, etc...
+
+**2. Vision Modules**
+
+Contains the face detection, object tracking, color detection, and other codes.
+
+**3. Audio Modules**
+
+Here we have the audio modules, testing speech recognition, syntheses, sound processing and audio effects.
+
+**4. Complex Behaviors**
+
+We've the codes used to testing greeting, navigation, interactive demonstration, educational routines, and others.
+
+
