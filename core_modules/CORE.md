@@ -95,3 +95,83 @@ Dado o fato de que **MyClass** herda de **GeneratedClass**, você pode utilizar 
 Os métodos que correspondem ao Input de na box devem ser definidos com a seguinte sintaxe: 
 
 **onInput_<input_name>**
+
+
+## Movimentos Básicos 
+
+### Postura
+#### Stand Up (Levantar)
+
+Código em Python: 
+
+```Python
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        #construtor, passando como false o auto output, portanto preciso especificar manualmente
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.nTries = 0 #atribui como zero o n° inicial de tentativas
+        self.postureService = self.session().service("ALRobotPosture") #usa métodos para aplicar postura nos métodos de postura do robô
+        pass
+
+    def onUnload(self):
+        self.postureService.stopMove() #aplica métodos para parar de mover quando encerrar
+
+    def onInput_onStart(self):
+
+        #lógica para que, se o número de tentativas for diferente do máximo, ele continue tentando
+        if(self.nTries != self.getParameter("Maximum of tries")):
+            self.nTries = self.getParameter("Maximum of tries")
+            self.postureService.setMaxTryNumber(self.nTries)
+
+        result = self.postureService.goToPosture(self.getParameter("Name"), self.getParameter("Speed (%)")/100.)
+
+        #lógica do resultado usando métodos sucess e failure, por isso há duas saídas na box
+        if(result):
+            self.success()
+        else:
+            self.failure()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #método usado para encerrar e parar qualquer movimento quando obtemos sucesso ou falha na tentativa de aplicar postura
+        pass
+```
+
+#### Sit Down (Sente-se)
+
+```Python
+class MyClass(GeneratedClass):
+    #construtor
+    def __init__(self):
+        GeneratedClass.__init__(self, False) #passa o parâmetro false para termos que especificar manualmente o resultado
+
+    #carrega a aplicação de postura da classe GeneratedClass que possui um método "postureService"
+    def onLoad(self):
+        self.postureService = self.session().service("ALRobotPosture")
+        pass
+
+    #método para parar os movimentos após o encerramento
+    def onUnload(self):
+        self.postureService.stopMove()
+
+    #método iniciado com um input
+    def onInput_onStart(self):
+        result = self.postureService.goToPosture(self.getParameter("Name"), self.getParameter("Speed (%)")/100.) #passa o nome do método e o parâmetro de velocidade que ele usará para levantar
+
+        if(result): #testando o valor do resultado
+            self.success() #usa o método sucess, se for bem sucedido, iremos aplicar a postura
+        else: 
+            #se tivermos falha, não aplicamos a postura p ficar sentado
+            self.failure()
+        pass
+
+    #método de encerramento com um input
+    def onInput_onStop(self):
+        self.onUnload() #recomendado usar para o robô não continuar se movendo 
+        pass
+```
+
+### Dança e Saudações
