@@ -71,6 +71,17 @@ Caminho Python: Defina o interpretador Python correto em Preferências
 
 Seu robô NAO agora está pronto para programação!
 
+## Visão Geral da API
+
+ O NAOqi é mais que uma simples API, pois oferece um ecossistema completo para execução de módulos, bibliotecas e comportamentos do Robô. É um serviço multiplataforma e multilinguagem ofertado pela Aldebaran, com a qual podemos nos comunicar em linguagens como Python, java e c++. Do ponto de vista de vantagens, python acaba sendo mais simples pois não exige nenhum tipo de pré compilação do código. Sobre a API, ela atua como um broker, realizando a intermediação entre as chamadas do usuário e os módulos.
+
+ O **NAOqi atua como uma ponte**, inteligando os **módulos** com os **métodos** disponíveis para execução.
+
+![Fluxo do NAOqi e Modulos](img/fluxo_broker_naoqi.png)
+
+Nesse contexto, o **NAOqi se comunica com os módulos que atuam como PROXY**, ou seja, procurador. Portanto, quando utilizarmos o módulo **ALMotion**, por exemplo, iremos **criar um objeto que contém todos os métodos disponíveis no ALMotion**.
+
+
 ## ORGANIZAÇÃO DOS MÓDULOS
 
 1. Módulos Principais
@@ -85,6 +96,11 @@ Contém a detecção facial, rastreamento de objetos, detecção de cores e outr
 
 Aqui temos os módulos de áudio, testando reconhecimento de fala, síntese, processamento de som e efeitos de áudio.
 
-4. Comportamentos Complexos
+4. Módulos de Memória
+
+Métodos para enviar e receber dados da memória.
+
+5. Comportamentos Complexos
 
 Temos os códigos usados para testar saudação, navegação, demonstração interativa, rotinas educacionais e outros.
+

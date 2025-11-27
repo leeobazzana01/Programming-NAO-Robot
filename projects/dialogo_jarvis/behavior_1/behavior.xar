@@ -3121,7 +3121,6 @@ class MyClass(GeneratedClass):
             <Link inputowner="11" indexofinput="2" outputowner="9" indexofoutput="4" />
             <Link inputowner="9" indexofinput="2" outputowner="10" indexofoutput="4" />
             <Link inputowner="10" indexofinput="2" outputowner="12" indexofoutput="4" />
-            <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
             <Link inputowner="2" indexofinput="4" outputowner="1" indexofoutput="4" />
             <Link inputowner="14" indexofinput="2" outputowner="2" indexofoutput="5" />
             <Link inputowner="3" indexofinput="4" outputowner="14" indexofoutput="3" />
@@ -3152,6 +3151,7 @@ class MyClass(GeneratedClass):
             <Link inputowner="19" indexofinput="2" outputowner="25" indexofoutput="4" />
             <Link inputowner="0" indexofinput="4" outputowner="19" indexofoutput="4" />
             <Link inputowner="22" indexofinput="2" outputowner="7" indexofoutput="8" />
+            <Link inputowner="22" indexofinput="2" outputowner="0" indexofoutput="2" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
